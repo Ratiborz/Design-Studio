@@ -208,8 +208,12 @@ body {
 .brick__text--p {
     font-size: 14px;
     color: #ffffff;
-    margin-bottom: 42px;
+    margin-bottom: 36px;
     line-height: 27px;
+}
+
+.brick__text--pseudo {
+    display: none;
 }
 
 .brick__text--h2 {
@@ -386,12 +390,19 @@ brick__directions {
 
 .section-04__form {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
     max-width: 769px;
     width: 100%;
     margin-top: 93px;
-    margin-bottom: 33px;
+}
+
+.section-04__form--wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 769px;
+    width: 100%;
 }
 
 .section-04__form--01 {
@@ -463,6 +474,8 @@ input[type='tel']::placeholder {
 
 .label__checkbox {
     max-width: 290px;
+    margin: 0 auto;
+    margin-top: 33px;
 }
 
 .checkbox,
@@ -908,6 +921,11 @@ input[type='tel']::placeholder {
     flex-direction: column;
 }
 
+.sec-07__photo--pseudo,
+.sec-07__photo--pseudo-02 {
+    display: none;
+}
+
 /* SECTION 08 */
 
 .section-08 {
@@ -1230,7 +1248,7 @@ input[type='tel']::placeholder {
     padding-bottom: 48px;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 375px){
     .container__header,
     .container-sec-01,
     .container-sec-02,
@@ -1274,12 +1292,40 @@ input[type='tel']::placeholder {
     }
 
 
-    .brick__tag--flex,
+    .brick__tag--flex {
+        display: none;
+    }
     .brick__img {
         display: none;
     }
+   .brick__text--pseudo {
+        display: block;
+        position: relative;
+        margin-bottom: 36px;
+   }
+   .brick__text--main-photo {
+        max-width: 340px;
+        max-height: 241px;
+   }
+   .brick__text--left {
+        position: absolute;
+        top: 102px;
+        left: 14px;
+        cursor: pointer;
+   }
+   .brick__text--right {
+        position: absolute;
+        top: 102px;
+        left: 289px;
+        cursor: pointer;
+   }
     .brick {
         padding-top: 36px;
+        padding-bottom: 870px;
+    }
+    .brick__text {
+        margin-right: 0;
+        margin-bottom: 0;
     }
     .brick__text h1 {
         font-size: 22px;
@@ -1294,6 +1340,9 @@ input[type='tel']::placeholder {
         font-size: 11px;
         line-height: 158.48%;
         text-align: center;
+        margin-left: auto;
+        max-width: 316px;
+        margin-right: auto;
     }
     .brick__text--h2 {
         font-size: 14px;
@@ -1302,6 +1351,9 @@ input[type='tel']::placeholder {
     .brick__text--discrip {
         font-size: 11px;
         line-height: 135.84%;
+    }
+    .brick__text-options {
+        margin-bottom: 0;
     }
     .brick__text-options-1 {
         margin-right: 61px;
@@ -1341,6 +1393,61 @@ input[type='tel']::placeholder {
         margin-top: 0;
         position: absolute;
     }
+    .section-03 {
+        margin-top: -815px;
+    }
+    .section-04__form {
+        margin-top: 61px;
+    }
+    .section-04__form--wrapper {
+        flex-wrap: wrap;
+    }
+    .section-04__form--01 {
+        margin-bottom: 63px;
+        margin-right: 0;
+        max-width: none;
+    }
+    input[type='text'] {
+        max-width: none;
+        color: #FFFFFF;
+        background-color: #131313;
+        border-bottom: 1px solid rgba(255, 255, 255, 1);
+    }
+    input[type='text']::placeholder {
+        color: #FFFFFF; 
+    }
+    input[type='tel'] {
+        color: #FFFFFF;
+        background-color: #131313; 
+        border-bottom: 1px solid rgba(255, 255, 255, 1);
+    }
+    input[type='tel']::placeholder {
+        color: #FFFFFF; 
+    }
+    .section-04__form--02 {
+        margin-bottom: 26px;
+        margin-right: 0;
+        max-width: none;
+    }
+    .label__checkbox {
+        order: 1;
+        margin: 0;
+        margin-bottom: 63px;
+    }
+    .section-04__form--btn {
+        max-width: none;
+        order: 2;
+    }
+    .label__checkbox--spn {
+        color: #FFFFFF;
+    }
+    .section-04__form--p {
+        color: rgba(255, 255, 255, 0.5);
+    }
+    
+
+
+
     .section-04 {
         max-width: 340px;
         margin: 0 auto;
@@ -1418,16 +1525,29 @@ input[type='tel']::placeholder {
         margin-left: auto;
         margin-right: auto;
     }
-    .sec-07__photo--par1::before {
-        content: "";
-        background-image: url(../images/Vector-left.svg);
-        background-repeat: no-repeat;
-        background-size: 36px 36px;
-        border-radius: 30px;
-        background-color: #e3b873;
+    .sec-07__photo--pseudo {
+        display: block;
+        position: relative;
+    }
+    .sec-07__photo--pseudo-img {
+        position: absolute;
+        top: -130px;
+        left: 14px;
+        z-index: 2;
+        cursor: pointer;
+    }
+    .sec-07__photo--pseudo-02 {
+        display: block;
+        position: relative;
+    }
+    .sec-07__photo--pseudo-02-img{
         position: absolute;
         z-index: 2;
+        top: -130px;
+        left: 290px;
+        cursor: pointer;
     }
+    
 
 
     .sec-09__head {
