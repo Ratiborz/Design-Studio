@@ -58,7 +58,7 @@ body {
     margin-right: 47px;
 }
 
-.nav__list--active a {
+.nav__list a:hover {
     color: #e3b873;
 }
 
@@ -265,16 +265,18 @@ body {
     text-transform: uppercase;
     margin-right: 60px;
     color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
 }
 
 .brick__tag--flex--p:last-child {
     margin-right: 0;
 }
 
-.brick__tag--flex--p:first-child a {
+.active__link  {
     color: #e3b873;
     padding-bottom: 7px;
     border-bottom: 1px solid #e3b873;
+    transition: color 0.5s;
 }
 
 .brick__directions--ellipse {
@@ -304,8 +306,9 @@ brick__directions {
     cursor: pointer;
 }
 
-.brick__directions--ellipse:first-of-type {
+.active {
     background-color: #ffffff;
+    transition: background-color 0.5s;
 }
 
 .brick__directions--ellipse:last-of-type {
@@ -1248,7 +1251,7 @@ input[type='tel']::placeholder {
     padding-bottom: 48px;
 }
 
-@media (max-width: 375px){
+@media (max-width: 1200px){
     .container__header,
     .container-sec-01,
     .container-sec-02,
@@ -1297,6 +1300,7 @@ input[type='tel']::placeholder {
     }
     .brick__img {
         display: none;
+        transition: 5;
     }
    .brick__text--pseudo {
         display: block;
